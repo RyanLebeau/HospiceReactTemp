@@ -1,3 +1,9 @@
+// ========================================
+// Code associated with creating a new blank
+// booklet that is added into the database.
+// Only a name for the booklet is asked from
+// the user here for creation.
+// ========================================
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router';
@@ -65,6 +71,7 @@ class CreateBooklet extends Component
         });
     }
 
+    // Insert the new booklet into the database upon creation
     CreateBooklet = () =>
     {
         let { appState } = this.props;

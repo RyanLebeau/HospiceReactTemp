@@ -1,3 +1,9 @@
+// ================================================
+// Code associated with filling out an existing
+// survey for an existing patient user that will be
+// saved into the "membersurveys" collection in the
+// database.
+// ================================================
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 
@@ -77,6 +83,7 @@ class StartBooklet extends Component
         });
     }
 
+    // Gets all patient users that are assigned to worker in the database
     getAllAssignedPatients = () =>
     {
         let { appState } = this.props;
@@ -129,6 +136,7 @@ class StartBooklet extends Component
         }
     }
 
+    // Gets all created booklets from the "survey" collection in the datbase
     getAllBooklets = () =>
     {
         let { appState } = this.props;
@@ -221,6 +229,9 @@ class StartBooklet extends Component
         });
     };
 
+    // Ask user to select patient assigned to them and a booklet,
+    // then create a new "membersurvey" document in the database
+    // and display the survey with the ability to fill it out.
     handleStartBooklet = () =>
     {
         let { appState } = this.props;

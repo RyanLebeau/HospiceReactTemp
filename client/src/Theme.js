@@ -9,6 +9,10 @@ import blue from '@material-ui/core/colors/blue';
 import green from '@material-ui/core/colors/green';
 import spacing from '@material-ui/core/styles/spacing';
 
+// ============================================
+// Generate theme based on options assigned in
+// createMuiTheme using the Material-UI API
+// ============================================
 export default createMuiTheme({
     palette : {
         primary: {

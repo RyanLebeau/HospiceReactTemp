@@ -1,3 +1,7 @@
+// ================================================
+// Code associated with assigning existing staff 
+// members to existing coordinator accounts.
+// ================================================
 import React, { Component } from 'react';
 
 // ==================== Helpers ====================
@@ -70,6 +74,7 @@ class UsersAssign extends Component
         });
     }
 
+    // Collects all documents from the "users" collection in the database
     getAllUsers = () =>
     {
         let { appState } = this.props;
@@ -137,6 +142,7 @@ class UsersAssign extends Component
         });
     }
 
+    // Assign reference worker ID to coordinator user in the database
     assignUserToWorker = () =>
     {
         let { worker, workerUser } = this.state;
@@ -247,6 +253,7 @@ class UsersAssign extends Component
         });
     };
 
+    // Render worker assignment page and data
     renderWorkerAssign = () =>
     {
         let { classes } = this.props;

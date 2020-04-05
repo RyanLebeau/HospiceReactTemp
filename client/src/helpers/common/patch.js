@@ -1,3 +1,7 @@
+// ============================================
+// Sends a PATCH request to server using axios
+// in order to modify already existing data
+// ============================================
 import axios from 'axios';
 
 export default (url, token, data, callback) =>

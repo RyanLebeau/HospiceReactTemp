@@ -57,6 +57,7 @@ class YourPatients extends Component
         });
     }
 
+    // Get all patients that are assigned to logged in user
     getUsers = () =>
     {
         let { appState } = this.props;
@@ -121,6 +122,7 @@ class YourPatients extends Component
         return { _id, name, role, email, createdAt }
     }
 
+    // Renders all patient cards with profile information
     renderCards = () =>
     {
         let { 

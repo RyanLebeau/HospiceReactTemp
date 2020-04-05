@@ -1,3 +1,8 @@
+// ================================================
+// Allows admin to create new users that are admins,
+// patients, workers or coordinators and input their
+// personal information.
+// ================================================
 import React, { Component } from 'react';
 import { Redirect } from 'react-router';
 

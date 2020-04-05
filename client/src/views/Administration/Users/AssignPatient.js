@@ -1,3 +1,8 @@
+// ================================================
+// Code associated with assigning an existing
+// patient user to an existing authorized WECCC
+// worker account.
+// ================================================
 import React, { Component } from 'react';
 
 // ==================== Helpers ====================
@@ -70,6 +75,7 @@ class UsersAssign extends Component
         });
     }
 
+    // Collects all documents from "users" collection in database
     getAllUsers = () =>
     {
         let { appState } = this.props;
@@ -137,6 +143,7 @@ class UsersAssign extends Component
         });
     }
 
+    // Assign reference patient ID to worker user in database 
     assignUserToPatient = () =>
     {
         let { patient, patientUser } = this.state;
@@ -248,6 +255,7 @@ class UsersAssign extends Component
         });
     };
 
+    // Render patient assignment page and data
     renderPatientAssign = () =>
     {
         let { classes } = this.props;

@@ -1,3 +1,8 @@
+// ================================================
+// Code for top navigation bar of application.
+// Include profile tab, toggling side bar menu and
+// notifications.
+// ================================================
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';

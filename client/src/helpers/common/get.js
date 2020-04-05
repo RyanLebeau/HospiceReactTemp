@@ -1,3 +1,6 @@
+// ============================================
+// Sends a GET request to server using axios
+// ============================================
 import axios from 'axios';
 
 export default (url, token, callback) =>

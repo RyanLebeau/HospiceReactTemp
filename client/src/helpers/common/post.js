@@ -1,3 +1,7 @@
+// ============================================
+// Sends a POST request to server using axios
+// allowing the server to accept incoming data
+// ============================================
 import axios from 'axios';
 
 export default (url, token, data, callback) =>

@@ -1,3 +1,9 @@
+// ================================================
+// Code associated with booklet management page.
+// Displays all existing booklets created and allows
+// user to delete, edit and preview the booklet
+// survey questions.
+// ================================================
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -112,6 +118,7 @@ class BookletsManagement extends Component
         });
     }
 
+    // Get all documents from the "survey" collection in database
     getSurveys = () =>
     {
         let { appState } = this.props;
@@ -159,6 +166,7 @@ class BookletsManagement extends Component
         }); 
     }
 
+    // Deletes selected booklet from database
     DeleteBooklet = () =>
     {
         let { appState } = this.props;
@@ -201,6 +209,7 @@ class BookletsManagement extends Component
         }));
     }
 
+    // Populates current survey state data with survey data from the database
     populateStateData = (data) => 
     {
         for (let index = 0; index < data.count; index++) 
@@ -224,6 +233,7 @@ class BookletsManagement extends Component
         return { _id, name, dateCreated, dateLastModified }
     }
 
+    // Renders table containing all existing booklets in the database
     renderTable = () =>
     {
         let { 
