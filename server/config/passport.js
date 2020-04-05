@@ -1,3 +1,9 @@
+/*
+This file handles logging in to the
+server tokens, whether it be a fialed or successful
+attemp, a token will be created.
+*/
+
 const config = require("./config");
 const bcrypt = require("bcryptjs");
 const mongoose = require("mongoose");
@@ -10,6 +16,7 @@ const log = logger.passport;
 
 const User = require("../models/user");
 
+//if there was an attempt at logging into the system
 passport.use('Local', new LocalStrategy({
     usernameField: 'email',
     passwordField: 'password'
@@ -54,6 +61,7 @@ passport.use('Local', new LocalStrategy({
     })
 }));
 
+//checking the generated token against JWT authentication
 passport.use('JwtToken', new JwtStrategy({
     jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
     secretOrKey: config.server.tokenKey

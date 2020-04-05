@@ -1,3 +1,10 @@
+/*
+This sets the model for a created survey by mongoose
+
+"Name of Survey, SurveyQuestions, CreatedBy, ModifiedBy, timestamp"
+*/
+
+
 const mongoose = require('mongoose');
 
 const surveySchema = mongoose.Schema({

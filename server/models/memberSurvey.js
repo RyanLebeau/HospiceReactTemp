@@ -1,3 +1,11 @@
+/*
+This sets the model for each member's survey by mongoose
+
+"PatientID, Name, SurveyQuestions, SurveyAnswers, Approved?,
+ApprovedBy, CreatedBy, ModifiedBy, timestamp"
+*/
+
+
 const mongoose = require('mongoose');
 
 const surveySchema = mongoose.Schema({

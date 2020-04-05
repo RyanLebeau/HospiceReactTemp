@@ -1,3 +1,8 @@
+/*
+This Javascript file controls the config.env
+It gathers all variables from the .env and exports
+them through the modules
+*/
 const dotenv = require('dotenv');
 
 const result = dotenv.config({ path: './config.env' });

@@ -3,6 +3,8 @@
 Hospice API Server
 Saman Arif
 December 14, 2018
+Ryan Lebeau, Shannon Guerreiro
+April, 2020
 ==============================================
 Dependencies:
 - Express

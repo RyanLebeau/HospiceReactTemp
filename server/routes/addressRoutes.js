@@ -1,3 +1,8 @@
+/*
+This route will validate that the correct token is being used
+and then pull its specific data from the addressController.
+*/
+
 const passport = require('passport');
 const express = require("express");
 const { validateBody, schemas } = require('../middleware/routeValidation');

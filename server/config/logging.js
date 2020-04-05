@@ -1,3 +1,9 @@
+/*
+This file contorls the logging of each js file
+Any module that will need a log or an append from
+the console is handled here
+*/
+
 const log4js = require("log4js");
 
 log4js.configure({
