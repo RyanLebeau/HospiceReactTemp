@@ -1,3 +1,9 @@
+// ================================================
+// Code associated with editing an existing booklet. 
+// This editor uses SurveyJS which allows for multiple
+// different survey questions to be embedded into the 
+// app and formats them into JSON.
+// ================================================
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -91,6 +97,7 @@ class EditBooklet extends Component
         }, 200); 
     }
 
+    // Loads existing booklet chosen by user from the database
     loadSurvey = () =>
     {
         let { appState } = this.props
@@ -155,6 +162,7 @@ class EditBooklet extends Component
         }
     }
 
+    // Changes name of the booklet
     handleNameChange = (event) =>
     {
         this.setState({
@@ -162,6 +170,7 @@ class EditBooklet extends Component
         });
     }
 
+    // Saves current state of survey and updates it in the database
     saveSurvey = () =>
     {
         let { name } = this.state;

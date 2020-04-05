@@ -1,3 +1,9 @@
+// ================================================
+// Code associated with previewing what a patient
+// will see when filling out an existing survey,
+// converting the surveyJSON into a more 
+// intelligible format.
+// ================================================
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -56,6 +62,7 @@ class ViewBooklet extends Component
         }, 200); 
     }
 
+    // Loads survey data from database
     loadSurvey = () =>
     {
         let { appState } = this.props;

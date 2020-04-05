@@ -1,3 +1,7 @@
+// ============================================
+// Send POST request for login authorization
+// using login information input by user
+// ============================================
 import axios from 'axios';
 
 export default (data, callback) =>

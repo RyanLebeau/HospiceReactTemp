@@ -1,3 +1,8 @@
+// ================================================
+// Renders all views within the user profile pages,
+// which includes booklets completed, patients 
+// assigned, workers assigned, other user info, etc.
+// ================================================
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';

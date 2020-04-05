@@ -1,3 +1,9 @@
+// ================================================
+// Code associated with starting a booklet to be
+// filled out. Requires logged in user to have a
+// patient assigned to them and for a booklet to
+// exist within the database.
+// ================================================
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -69,6 +75,7 @@ class Booklet extends Component
         Survey.StylesManager.applyTheme('darkblue');
     }
 
+    // Loads an existing survey from the database
     loadSurvey = () =>
     {
         let { appState } = this.props;
@@ -134,6 +141,7 @@ class Booklet extends Component
         }
     }
 
+    // Saves the current state of the survey into the "membersurveys" collection in database
     saveSurvey = (survey) =>
     {
         let { appState } = this.props;
@@ -180,6 +188,7 @@ class Booklet extends Component
         });
     }
 
+    // Changes approval state for a completed survey by an administrator
     approveSurvey = () =>
     {
         let { surveyApproved } = this.state;
@@ -231,6 +240,7 @@ class Booklet extends Component
         });
     }
 
+    // Exports saved/completed survey to be downloaded into a PDF
     exportToPDF = () =>
     {
         const memberSurveyID = this.props.match.params.memberSurveyID;

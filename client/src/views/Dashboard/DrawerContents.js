@@ -1,3 +1,8 @@
+// ================================================
+// Code for rendering dashboard side bar items
+// depending on the logged in user's authorization
+// level.
+// ================================================
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
