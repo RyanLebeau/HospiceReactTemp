@@ -1,3 +1,10 @@
+// ================================================
+// Code associated with the side bar dashboard
+// that contains routes to items such as assigning
+// patients to workers, creating booklets, etc.
+// depending on the current logged in user's
+// authorization level (admin, coordinator, etc.)
+// ================================================
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';

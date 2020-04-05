@@ -1,3 +1,8 @@
+// ================================================
+// Code associated with allowing the editing of
+// profile information, such as address, phone number,
+// etc. and updated into the database.
+// ================================================
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 

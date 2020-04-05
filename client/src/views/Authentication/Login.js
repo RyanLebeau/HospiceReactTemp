@@ -1,3 +1,7 @@
+// ================================================
+// Code associated with login page for app. Contains
+// normal login scenario and WECCC login scenario.
+// ================================================
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -82,6 +86,7 @@ class Login extends Component
         };
     }
 
+    // Change state of user's email address
     handleEmailChange = (event) =>
     {
         this.setState({
@@ -89,6 +94,7 @@ class Login extends Component
         });
     }
 
+    // Change state of user's password
     handlePasswordChange = (event) =>
     {
         this.setState({
@@ -96,6 +102,7 @@ class Login extends Component
         });
     }
 
+    // Normal login scenario
     handleLogin = () =>
     {
         let { email, password } = this.state;
@@ -189,6 +196,7 @@ class Login extends Component
         });
     }
 
+    // WECCC login scenario
     handleWECCLogin = () =>
     {
         let { email, password } = this.state;

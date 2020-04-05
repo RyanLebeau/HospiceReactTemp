@@ -1,3 +1,7 @@
+// ================================================
+// Exports a PDF through a browser popup of a
+// completed/saved patient survey that exists.
+// ================================================
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -70,6 +74,7 @@ class Booklet extends Component
         Survey.StylesManager.applyTheme('darkblue');
     }
 
+    // Loads saved patient survey that exists in the database
     loadSurvey = () =>
     {
         let { appState } = this.props;
@@ -134,6 +139,7 @@ class Booklet extends Component
         console.log("Survey Cannot be saved.");
     }
 
+    // Exports survey into a PDF file
     exportToPDF = () =>
     {
         var surveyHolder = document.getElementById("pdf");
