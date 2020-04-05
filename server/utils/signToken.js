@@ -1,8 +1,10 @@
 /*
+=================================================================
 This file will authenticate and sign each token
 that has been created by JWT with the time and userID that
 has created it. It will also log it's expiration time in seconds.
 It wil then return the token to the program calling this file.
+=================================================================
 */
 
 const jwt = require("jsonwebtoken");

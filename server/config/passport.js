@@ -1,7 +1,9 @@
 /*
+===================================================
 This file handles logging in to the
 server tokens, whether it be a fialed or successful
 attemp, a token will be created.
+===================================================
 */
 
 const config = require("./config");

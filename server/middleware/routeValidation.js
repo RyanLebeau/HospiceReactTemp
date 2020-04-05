@@ -1,9 +1,11 @@
 /*
+=============================================================
 This middleware file will have access to the 
 request, and the response objec tof the current cycle.
 This helps control the next response from this server.
 Once the middleware is complete it is passed off to the next
 file in the stack.
+=============================================================
 */
 
 const Joi = require('joi');

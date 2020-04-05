@@ -1,8 +1,10 @@
 /*
+===========================================================
 This sets the model for a sticky note created by mongoose
 
 "Patient's ID, Level of Sticky, Message, Open?, CreatedBy,
 ModifiedBy, timestamp"
+===========================================================
 */
 
 

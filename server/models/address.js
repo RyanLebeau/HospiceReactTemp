@@ -1,7 +1,9 @@
 /*
+=====================================================
 Sets the model for an adress to be logged by mongoose
 
 "Street, City, State, ZIP, Country"
+=====================================================
 */
 
 const mongoose = require('mongoose');

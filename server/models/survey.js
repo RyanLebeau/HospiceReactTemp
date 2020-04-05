@@ -1,7 +1,9 @@
 /*
+====================================================================
 This sets the model for a created survey by mongoose
 
 "Name of Survey, SurveyQuestions, CreatedBy, ModifiedBy, timestamp"
+====================================================================
 */
 
 

@@ -1,7 +1,9 @@
 /*
+=============================================================
 This sets the model for which facility is entered by mongoose
 
 "Name of facility, Prefix"
+=============================================================
 */
 
 const mongoose = require('mongoose');

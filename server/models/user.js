@@ -1,11 +1,10 @@
 /*
-==============================================
-User Model
-==============================================
+=====================================================
 This sets the model for each user by mongoose
 
 "Facility They Belong To, Enabled?, Email, Password,
 Their Role, Personal Info, Research Type, timestamp"
+=====================================================
 */
 
 const mongoose = require('mongoose');

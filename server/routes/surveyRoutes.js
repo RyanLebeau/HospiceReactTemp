@@ -1,6 +1,8 @@
 /*
+=============================================================
 This route will validate that the correct token is being used
 and then pull its specific data from the SurveyController.
+==============================================================
 */
 
 const passport = require('passport');
