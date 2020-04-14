@@ -268,3 +268,44 @@ exports.delete = (req, res, next) =>
         });
     });
 };
+
+// ====================================================
+// Join Users and MemberSurveys tables
+// ====================================================
+exports.userInfoSurveys = (req, res, next) =>
+{
+    MemberSurvey.find()
+    .populate('patientId')
+    .exec() 
+    .then(memberSurveys => {
+        const response = {
+            count: memberSurveys.length,
+            memberSurveys: memberSurveys.map(memberSurvey => {
+                return {
+                    _id: memberSurvey._id,
+                    patientId: memberSurvey.patientId._id,
+                    patientName: memberSurvey.patientId.info.name,
+                    name: memberSurvey.name,
+                    approved: memberSurvey.approved,
+                    createdBy: memberSurvey.createdBy,
+                    modifiedBy: memberSurvey.modifiedBy,
+                    createdAt: memberSurvey.createdAt,
+                    updatedAt: memberSurvey.updatedAt,
+                    request: { 
+                        type: 'GET',
+                        url: config.server.protocol + '://' + config.server.hostname +':' + config.server.port + config.server.extension + '/membersurveys/' + memberSurvey._id
+                    }
+                }
+            })
+        }
+
+        res.status(200).json({response});
+    })
+    .catch(error => {
+        log.error(error.message);
+
+        return res.status(500).json({
+            message: error.message
+        });
+    });
+};

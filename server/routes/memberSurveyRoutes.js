@@ -15,6 +15,7 @@ const authenticate = passport.authenticate('JwtToken', { session: false });
 
 router.get('/', authenticate, MemberSurveyController.readall);
 router.get('/:memberSurveyID', authenticate, MemberSurveyController.read);
+router.get('/user/surveys', authenticate, MemberSurveyController.userInfoSurveys);
 router.post('/', validateBody(schemas.memberSurvey.create), authenticate, MemberSurveyController.create);
 router.post('/query', authenticate, MemberSurveyController.query);
 router.patch('/:memberSurveyID', authenticate, MemberSurveyController.update);

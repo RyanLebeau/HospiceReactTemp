@@ -23,6 +23,7 @@ import Main from './Main';
 import Start from './StartABooklet';
 import Booklet from './Booklet';
 import YourPatients from './YourPatients';
+import Search from './Search';
 import ViewProfile from '../Profiles/View';
 import CreatePerson from '../Administration/Users/CreatePerson';
 import PatientAssign from '../Administration/Users/AssignPatient';
@@ -153,6 +154,7 @@ class Dashboard extends Component
                             <Route path="/booklet/:memberSurveyID" render={(props) => <Booklet {...props} appState={this.props.appState} CheckAuthenticationValidity={this.props.CheckAuthenticationValidity} ToggleDrawerClose={this.toggleDrawerClose}/>} />
                             <Route path="/pdf/:memberSurveyID" render={(props) => <PDFPopup {...props} appState={this.props.appState} CheckAuthenticationValidity={this.props.CheckAuthenticationValidity} ToggleDrawerClose={this.toggleDrawerClose} toggleExportRender={this.toggleExportRender}/>} />
                             <Route path="/your" render={(props) => <YourPatients {...props} appState={this.props.appState} CheckAuthenticationValidity={this.props.CheckAuthenticationValidity} ToggleDrawerClose={this.toggleDrawerClose} UpdateUser={this.props.UpdateUser}/> } />
+                            <Route path="/search" render={(props) => <Search {...props} appState={this.props.appState} CheckAuthenticationValidity={this.props.CheckAuthenticationValidity} ToggleDrawerClose={this.toggleDrawerClose} UpdateUser={this.props.UpdateUser}/> } />
                             <Route path="/profile/:profileID?" render={(props) => <ViewProfile {...props} appState={this.props.appState} CheckAuthenticationValidity={this.props.CheckAuthenticationValidity} ToggleDrawerClose={this.toggleDrawerClose}/>} />
                             <Route path="/administration/users/invite" render={(props) => <CreatePerson {...props} appState={this.props.appState} CheckAuthenticationValidity={this.props.CheckAuthenticationValidity} ToggleDrawerClose={this.toggleDrawerClose}/>} />
                             <Route path="/administration/users/assign/patient" render={(props) => <PatientAssign {...props} appState={this.props.appState} CheckAuthenticationValidity={this.props.CheckAuthenticationValidity} ToggleDrawerClose={this.toggleDrawerClose} UpdateUser={this.props.UpdateUser}/>} />
