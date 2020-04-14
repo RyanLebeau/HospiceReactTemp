@@ -24,6 +24,7 @@ import Book from '@material-ui/icons/Book';
 import Dashboard from '@material-ui/icons/Dashboard';
 import EventNote from '@material-ui/icons/EventNote';
 import Mood from '@material-ui/icons/Mood';
+import SearchIcon from '@material-ui/icons/Search';
 import PersonPin from '@material-ui/icons/PersonPin';
 
 const styles = theme => ({
@@ -73,9 +74,13 @@ class DrawerContents extends Component
 						<ListItemIcon><Ballot /></ListItemIcon>
 						<ListItemText primary="Start a Booklet" />
 					</ListItem>
-					<ListItem button component={Link} to="/your" divider>
+					<ListItem button component={Link} to="/your">
 						<ListItemIcon><Mood /></ListItemIcon>
 						<ListItemText primary="Your Patients" />
+					</ListItem>
+					<ListItem button component={Link} to="/search" divider>
+						<ListItemIcon><SearchIcon /></ListItemIcon>
+						<ListItemText primary="Search" />
 					</ListItem>
 				</List>
 				{appState.role === "Admin" &&
