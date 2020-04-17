@@ -34,6 +34,7 @@ class Search extends Component
     {
         super(props);
 
+        // Contains states used to filter search
         this.state = {
             search: "",
             booklet: "",
@@ -65,6 +66,7 @@ class Search extends Component
     }
 
     // Get all merged documents from the "membersurvey" and "user" collections in database
+    // Get all documents from "survey" collection in database
     getMemberSurveys = () =>
     {
         let { appState } = this.props;
@@ -122,7 +124,7 @@ class Search extends Component
         });
     }
 
-    // Populates current survey state data with survey data from the database
+    // Populates merged "membersurvey" and "user" data from the database into membersurveys.library 
     populateMemberSurveyData = (data) => 
     {
         for (let index = 0; index < data.count; index++) 
@@ -146,6 +148,7 @@ class Search extends Component
         });
     }
 
+    // Populates data from "survey" collection into booklets.library
     populateSurveyData = (data) => 
     {
         for (let index = 0; index < data.count; index++) 
@@ -162,7 +165,7 @@ class Search extends Component
         });
     }
 
-    //Updates search state when user types in search box
+    //Updates search states 
     updateSearch(event) {
         this.setState({[event.target.name]: event.target.value})
     }
@@ -205,18 +208,23 @@ class Search extends Component
                                             this.booklets.library[index].name));
         }
 
-        //filteredSurvey contains the filtered data depending on the user's search
+        // filteredSurvey contains the filtered data depending on the user's search by checking
+        // if each row passes the user's search criteria in the form of condition statements
         let filteredSurveys = mRows.filter(
             (row) => {
                 var createdAt = new Date(row.createdAt);
                 var inputDate = new Date(this.state.date);
 
+                // Patient name check
                 return (row.patientName.toLowerCase().indexOf(
                     this.state.search.toLowerCase()) !== -1) &&
+                // Booklet name check
                     (row.name.toLowerCase().indexOf(
                         this.state.booklet.toLowerCase()) !== -1) &&
+                // Approval check
                     (row.approved.toString().toLowerCase().indexOf(
                         this.state.approval.toLowerCase()) !== -1) &&
+                // Created before certain date check
                     (createdAt <= inputDate || this.state.date === "");
             }
         );
@@ -232,6 +240,8 @@ class Search extends Component
         }
         else
         {
+            // Ensure all filter input elements have the same "name" value as their respective state name
+            // and their "value" is the current state value of the corresponding state you're filtering.
             return(
                 <div>
                     <Typography>
